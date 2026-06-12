@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nike Elite Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+NIKE
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#products">Products</a></li>
+
+<li><a href="#checkout">Checkout</a></li>
+
+</ul>
+
+<div class="icons">
+
+<button id="wishlistBtn">
+
+<i class="fa-solid fa-heart"></i>
+
+<span id="wishlistCount">0</span>
+
+</button>
+
+<button id="cartBtn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cartCount">0</span>
+
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Move Faster. Train Harder.</h1>
+
+<p>
+Discover the latest Nike collection designed for champions.
+</p>
+
+<a href="#products" class="shop-btn">
+
+Shop Collection
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="feature">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>Free Delivery</h3>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-rotate-left"></i>
+
+<h3>Easy Returns</h3>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Secure Payment</h3>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>24/7 Support</h3>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products-section" id="products">
+
+<h2>Featured Products</h2>
+
+<div class="filters">
+
+<input
+type="text"
+id="search"
+placeholder="Search Nike Products...">
+
+<select id="categoryFilter">
+
+<option value="all">
+All Categories
+</option>
+
+<option value="Running">
+Running
+</option>
+
+<option value="Lifestyle">
+Lifestyle
+</option>
+
+<option value="Training">
+Training
+</option>
+
+</select>
+
+<select id="sortPrice">
+
+<option value="default">
+Sort By
+</option>
+
+<option value="low">
+Price Low → High
+</option>
+
+<option value="high">
+Price High → Low
+</option>
+
+</select>
+
+</div>
+
+<div class="products-grid"
+id="productsGrid">
+
+</div>
+
+</section>
+
+<!-- WISHLIST -->
+
+<div class="wishlist-sidebar"
+id="wishlistSidebar">
+
+<h2>My Wishlist</h2>
+
+<div id="wishlistItems">
+
+</div>
+
+</div>
+
+<!-- CART -->
+
+<div class="cart-sidebar"
+id="cartSidebar">
+
+<h2>Shopping Cart</h2>
+
+<div id="cartItems">
+
+</div>
+
+<div class="cart-summary">
+
+<p>
+
+Subtotal :
+
+₹<span id="subtotal">
+
+0
+
+</span>
+
+</p>
+
+<p>
+
+GST (18%) :
+
+₹<span id="gst">
+
+0
+
+</span>
+
+</p>
+
+<p>
+
+Shipping :
+
+₹<span id="shipping">
+
+199
+
+</span>
+
+</p>
+
+<h3>
+
+Grand Total :
+
+₹<span id="grandTotal">
+
+0
+
+</span>
+
+</h3>
+
+</div>
+
+<button
+class="checkout-open-btn">
+
+Proceed To Checkout
+
+</button>
+
+</div>
+
+<!-- CHECKOUT -->
+
+<section
+class="checkout-section"
+id="checkout">
+
+<h2>Billing Details</h2>
+
+<form id="checkoutForm">
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+<input
+type="tel"
+placeholder="Phone Number"
+required>
+
+<input
+type="text"
+placeholder="Address"
+required>
+
+<input
+type="text"
+placeholder="City"
+required>
+
+<input
+type="text"
+placeholder="State"
+required>
+
+<input
+type="number"
+placeholder="Pincode"
+required>
+
+<h3>Payment Method</h3>
+
+<div class="payment-methods">
+
+<label>
+
+<input
+type="radio"
+name="payment"
+checked>
+
+UPI
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="payment">
+
+Credit Card
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="payment">
+
+Debit Card
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="payment">
+
+Cash On Delivery
+
+</label>
+
+</div>
+
+<div class="coupon-box">
+
+<input
+type="text"
+id="coupon"
+placeholder="Enter Coupon Code">
+
+<button
+type="button"
+id="applyCoupon">
+
+Apply
+
+</button>
+
+</div>
+
+<button
+type="submit"
+class="place-order-btn">
+
+Place Order
+
+</button>
+
+</form>
+
+</section>
+
+<!-- ORDER SUCCESS -->
+
+<div
+class="success-popup"
+id="successPopup">
+
+<div class="success-content">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h2>
+Order Placed Successfully!
+</h2>
+
+<p>
+Thank you for shopping with Nike.
+</p>
+
+<button id="closePopup">
+Continue Shopping
+</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-content">
+
+<h3>NIKE ELITE STORE</h3>
+
+<p>
+Premium Sports Collection
+</p>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
